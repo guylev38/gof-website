@@ -1,17 +1,78 @@
-:root{
-  --primary: #457b9d;
-  --background: #f1faee;
-  --accent: #a8dadc;
-  --dark: #1d3557;
+@font-face {
+  font-family: ocr;
+  src: url(font.ttf);
 }
 
+
+:root{
+  --green: #00FF00;
+  --black: #101010;
+  --white: #FFFFFF;
+}
 
 *{
   margin: 0;
   padding: 0;
+  color: var(--black);
+  font-family: ocr;
 }
 
 body{
-  background-color: var(--background);
+  background-color: var(--black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
 }
 
+.buttons-upper{
+  margin: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.buttons-lower{
+  margin: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+button{
+  background-color: var(--green);
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  height: 50px;
+  width: 70px;
+  font-size: 1.05rem;
+}
+
+#grid{
+  display: grid;
+  background-color: var(--white);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  height: 50vh;
+  width: 500px;
+  box-shadow: 0px 0px 50px var(--green);
+}
+
+.cell{
+  border: 1px solid var(--black);
+}
+
+
+footer{
+  margin-top: 20px; 
+  font-size: 1.05rem;
+}
+
+
+footer > p{
+  color: var(--white);
+}
+
+footer > p > a{
+  color: var(--green);
+}
